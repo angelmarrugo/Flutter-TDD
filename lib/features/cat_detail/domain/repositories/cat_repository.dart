@@ -5,6 +5,9 @@ import 'package:dartz/dartz.dart';
 
 /// Repository contract ~ get list of cats
 abstract class CatRepository {
+  /// Obtain all data of cats
   Future<Either<Failure, List<Cat>>> getCats();
+
+  /// Search in the data coincidence with [breed]
   Future<Either<Failure, List<Cat>>> searchCat(String breed);
 }
