@@ -38,7 +38,6 @@ void main() {
     test('should return a valid model', () async {
       // Arrange
       final jsonMap = json.decode(fixture('response_cats.json'));
-      print('$jsonMap');
       // Act
       List<CatDTO> result = [];
       for (var element in jsonMap) {
@@ -58,7 +57,7 @@ void main() {
         'id': '1',
         'name': 'test',
         'description': 'test',
-        'image': 'test-url-image',
+        'image': {'id': 'test', 'url': 'test-url-image'},
         'temperament': 'test',
         'origin': 'test',
         'adaptability': 1,

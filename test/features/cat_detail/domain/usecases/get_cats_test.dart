@@ -1,5 +1,6 @@
 import 'package:app_cats/core/usecases/usecase.dart';
 import 'package:app_cats/features/cat_detail/domain/entities/cat.dart';
+import 'package:app_cats/features/cat_detail/domain/entities/image.dart';
 import 'package:app_cats/features/cat_detail/domain/repositories/cat_repository.dart';
 import 'package:app_cats/features/cat_detail/domain/usecases/get_cats.dart';
 import 'package:dartz/dartz.dart';
@@ -26,7 +27,7 @@ void main() {
       id: 'id',
       name: tName1,
       description: 'test',
-      image: 'test',
+      image: Image(id: 'test', url: 'test-url-image'),
       temperament: 'test',
       origin: 'test',
       adaptability: 1,
@@ -35,7 +36,7 @@ void main() {
       id: 'id',
       name: tName2,
       description: 'test',
-      image: 'test',
+      image: Image(id: 'test', url: 'test-url-image'),
       temperament: 'test',
       origin: 'test',
       adaptability: 1,

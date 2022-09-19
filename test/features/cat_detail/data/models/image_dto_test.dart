@@ -17,7 +17,7 @@ void main() {
       List<CatDTO> result = [];
       for (var element in jsonMap) {
         // Asset
-        expect(CatDTO.fromJson(element).image, tImageDTO.url);
+        expect(CatDTO.fromJson(element).image.url, tImageDTO.url);
       }
     });
   });

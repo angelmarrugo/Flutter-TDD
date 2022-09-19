@@ -41,7 +41,7 @@
         "hypoallergenic": 0,
         "reference_image_id": "0XYvRd7oD",
         "image": {
-            "id": "0XYvRd7oD",
+            "id": "test",
             "width": 1204,
             "height": 1445,
             "url": "test-url-image"
@@ -86,7 +86,7 @@
         "hypoallergenic": 0,
         "reference_image_id": "ozEvzdVM-",
         "image": {
-            "id": "ozEvzdVM-",
+            "id": "test",
             "width": 1200,
             "height": 800,
             "url": "test-url-image"
