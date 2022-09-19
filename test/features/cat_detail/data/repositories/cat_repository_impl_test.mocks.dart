@@ -4,11 +4,12 @@
 
 import 'dart:async' as _i3;
 
-import 'package:app_cats/core/platform/network_info.dart' as _i5;
+import 'package:app_cats/core/platform/network_info.dart' as _i6;
 import 'package:app_cats/features/cat_detail/data/datasources/cat_local_data_source.dart'
-    as _i4;
+    as _i5;
 import 'package:app_cats/features/cat_detail/data/datasources/cat_remote_data_source.dart'
     as _i2;
+import 'package:app_cats/features/cat_detail/data/models/cat_dto.dart' as _i4;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -31,33 +32,33 @@ class MockCatRemoteDataSource extends _i1.Mock
   }
 
   @override
-  _i3.Future<List<dynamic>> getCats() =>
+  _i3.Future<List<_i4.CatDTO>> getCats() =>
       (super.noSuchMethod(Invocation.method(#getCats, []),
-              returnValue: Future<List<dynamic>>.value(<dynamic>[]))
-          as _i3.Future<List<dynamic>>);
+              returnValue: Future<List<_i4.CatDTO>>.value(<_i4.CatDTO>[]))
+          as _i3.Future<List<_i4.CatDTO>>);
   @override
-  _i3.Future<List<dynamic>> searchCat(String? breed) =>
+  _i3.Future<List<_i4.CatDTO>> searchCat(String? breed) =>
       (super.noSuchMethod(Invocation.method(#searchCat, [breed]),
-              returnValue: Future<List<dynamic>>.value(<dynamic>[]))
-          as _i3.Future<List<dynamic>>);
+              returnValue: Future<List<_i4.CatDTO>>.value(<_i4.CatDTO>[]))
+          as _i3.Future<List<_i4.CatDTO>>);
 }
 
 /// A class which mocks [CatLocalDataSource].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockCatLocalDataSource extends _i1.Mock
-    implements _i4.CatLocalDataSource {
+    implements _i5.CatLocalDataSource {
   MockCatLocalDataSource() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i3.Future<List<dynamic>> getCats() =>
+  _i3.Future<List<_i4.CatDTO>> getCats() =>
       (super.noSuchMethod(Invocation.method(#getCats, []),
-              returnValue: Future<List<dynamic>>.value(<dynamic>[]))
-          as _i3.Future<List<dynamic>>);
+              returnValue: Future<List<_i4.CatDTO>>.value(<_i4.CatDTO>[]))
+          as _i3.Future<List<_i4.CatDTO>>);
   @override
-  _i3.Future<void> cacheCats(List<dynamic>? cats) =>
+  _i3.Future<void> cacheCats(List<_i4.CatDTO>? cats) =>
       (super.noSuchMethod(Invocation.method(#cacheCats, [cats]),
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future<void>.value()) as _i3.Future<void>);
@@ -66,7 +67,7 @@ class MockCatLocalDataSource extends _i1.Mock
 /// A class which mocks [NetworkInfo].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockNetworkInfo extends _i1.Mock implements _i5.NetworkInfo {
+class MockNetworkInfo extends _i1.Mock implements _i6.NetworkInfo {
   MockNetworkInfo() {
     _i1.throwOnMissingStub(this);
   }

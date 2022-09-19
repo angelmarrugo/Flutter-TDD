@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:app_cats/features/cat_detail/data/models/cat_DTO.dart';
+import 'package:app_cats/features/cat_detail/data/models/cat_dto.dart';
 import 'package:app_cats/features/cat_detail/data/models/image_dto.dart';
 import 'package:app_cats/features/cat_detail/domain/entities/cat.dart';
 import 'package:flutter_test/flutter_test.dart';
