@@ -37,10 +37,4 @@ class MockCatRepository extends _i1.Mock implements _i3.CatRepository {
               returnValue: Future<_i2.Either<_i5.Failure, List<_i6.Cat>>>.value(
                   _FakeEither_0<_i5.Failure, List<_i6.Cat>>()))
           as _i4.Future<_i2.Either<_i5.Failure, List<_i6.Cat>>>);
-  @override
-  _i4.Future<_i2.Either<_i5.Failure, List<_i6.Cat>>> searchCat(String? breed) =>
-      (super.noSuchMethod(Invocation.method(#searchCat, [breed]),
-              returnValue: Future<_i2.Either<_i5.Failure, List<_i6.Cat>>>.value(
-                  _FakeEither_0<_i5.Failure, List<_i6.Cat>>()))
-          as _i4.Future<_i2.Either<_i5.Failure, List<_i6.Cat>>>);
 }

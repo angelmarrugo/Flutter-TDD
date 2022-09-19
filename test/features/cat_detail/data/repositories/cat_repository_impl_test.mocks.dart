@@ -36,11 +36,6 @@ class MockCatRemoteDataSource extends _i1.Mock
       (super.noSuchMethod(Invocation.method(#getCats, []),
               returnValue: Future<List<_i4.CatDTO>>.value(<_i4.CatDTO>[]))
           as _i3.Future<List<_i4.CatDTO>>);
-  @override
-  _i3.Future<List<_i4.CatDTO>> searchCat(String? breed) =>
-      (super.noSuchMethod(Invocation.method(#searchCat, [breed]),
-              returnValue: Future<List<_i4.CatDTO>>.value(<_i4.CatDTO>[]))
-          as _i3.Future<List<_i4.CatDTO>>);
 }
 
 /// A class which mocks [CatLocalDataSource].

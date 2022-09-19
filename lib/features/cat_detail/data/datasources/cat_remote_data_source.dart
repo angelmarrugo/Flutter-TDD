@@ -6,7 +6,4 @@ abstract class CatRemoteDataSource {
   ///
   /// Throws a [ServerException] for all error codes.
   Future<List<CatDTO>> getCats();
-
-  /// Calls the local Storage
-  Future<List<CatDTO>> searchCat(String breed);
 }

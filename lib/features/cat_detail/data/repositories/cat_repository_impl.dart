@@ -46,10 +46,4 @@ class CatRepositoryImpl implements CatRepository {
       }
     }
   }
-
-  @override
-  Future<Either<Failure, List<Cat>>> searchCat(String breed) {
-    // TODO: implement searchCat
-    throw UnimplementedError();
-  }
 }
