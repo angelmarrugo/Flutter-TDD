@@ -1,6 +1,6 @@
 import 'package:app_cats/core/error/exception.dart';
 import 'package:app_cats/core/error/failures.dart';
-import 'package:app_cats/core/platform/network_info.dart';
+import 'package:app_cats/core/network/network_info.dart';
 import 'package:app_cats/features/cat_detail/data/datasources/cat_local_data_source.dart';
 import 'package:app_cats/features/cat_detail/data/datasources/cat_remote_data_source.dart';
 import 'package:app_cats/features/cat_detail/data/models/cat_dto.dart';

@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:app_cats/core/error/exception.dart';
 
-import '/core/platform/network_info.dart';
+import '/core/network/network_info.dart';
 import '/features/cat_detail/data/datasources/cat_local_data_source.dart';
 import '/features/cat_detail/data/datasources/cat_remote_data_source.dart';
 import '/core/error/failures.dart';

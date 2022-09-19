@@ -4,7 +4,7 @@
 
 import 'dart:async' as _i3;
 
-import 'package:app_cats/core/platform/network_info.dart' as _i6;
+import 'package:app_cats/core/network/network_info.dart' as _i6;
 import 'package:app_cats/features/cat_detail/data/datasources/cat_local_data_source.dart'
     as _i5;
 import 'package:app_cats/features/cat_detail/data/datasources/cat_remote_data_source.dart'
