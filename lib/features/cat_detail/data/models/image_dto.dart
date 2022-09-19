@@ -1,10 +1,12 @@
+import 'package:app_cats/features/cat_detail/domain/entities/image.dart';
+
 /// Data Transfer Object Image
-class ImageDTO {
+class ImageDTO extends Image {
   /// Constructor
   const ImageDTO({
     required this.id,
     required this.url,
-  });
+  }) : super(id: id, url: url);
 
   /// Identify image
   final String id;

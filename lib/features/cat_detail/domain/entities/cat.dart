@@ -1,7 +1,9 @@
+import '/features/cat_detail/domain/entities/image.dart';
 import 'package:equatable/equatable.dart';
 
 /// Business object that contain all information about cat
 class Cat extends Equatable {
+  /// Constructor
   const Cat({
     required this.id,
     required this.name,
@@ -21,8 +23,8 @@ class Cat extends Equatable {
   /// Information basic about cat
   final String description;
 
-  /// Image with format PNG, JPG of cat
-  final String image;
+  /// Object business with url image
+  final Image image;
 
   /// Attributes conduct of cat
   final String temperament;

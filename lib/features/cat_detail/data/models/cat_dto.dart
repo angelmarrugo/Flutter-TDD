@@ -1,3 +1,4 @@
+import '/features/cat_detail/domain/entities/image.dart';
 import '/features/cat_detail/data/models/image_dto.dart';
 import '/features/cat_detail/domain/entities/cat.dart';
 
@@ -15,7 +16,7 @@ class CatDTO extends Cat {
             id: id,
             name: name,
             description: description,
-            image: image.url,
+            image: Image(id: image.id, url: image.url),
             temperament: temperament,
             origin: origin,
             adaptability: adaptability);
@@ -36,7 +37,7 @@ class CatDTO extends Cat {
         'id': id,
         'name': name,
         'description': description,
-        'image': image,
+        'image': ImageDTO(id: image.id, url: image.url).toJson(),
         'temperament': temperament,
         'origin': origin,
         'adaptability': adaptability,
