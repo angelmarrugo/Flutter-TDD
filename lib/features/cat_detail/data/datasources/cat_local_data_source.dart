@@ -43,8 +43,6 @@ class CatLocalDataSourceImpl implements CatLocalDataSource {
   }
 
   @override
-  Future<void> cacheCats(List<CatDTO> cats) {
-    // TODO: implement cacheCats
-    throw UnimplementedError();
-  }
+  Future<void> cacheCats(List<CatDTO> cats) => sharedPreferences.setString(
+      CACHED_CATS, cats.map((e) => e.toJson()).toList().toString());
 }

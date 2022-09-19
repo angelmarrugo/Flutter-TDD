@@ -4,6 +4,7 @@ import 'package:app_cats/core/error/exception.dart';
 import 'package:app_cats/core/shared/constants/constants_storage.dart';
 import 'package:app_cats/features/cat_detail/data/datasources/cat_local_data_source.dart';
 import 'package:app_cats/features/cat_detail/data/models/cat_dto.dart';
+import 'package:app_cats/features/cat_detail/data/models/image_dto.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
@@ -49,6 +50,40 @@ void main() {
       final call = dataSource.getCats;
       // Assert
       expect(() => call(), throwsA(const TypeMatcher<CacheException>()));
+    });
+  });
+
+  group('cacheCats', () {
+    final tCatsDTO = [
+      CatDTO(
+        id: '1',
+        name: 'test',
+        description: 'test',
+        image: const ImageDTO(id: 'test', url: 'test-url-image'),
+        temperament: 'test',
+        origin: 'test',
+        adaptability: 1,
+      ),
+      CatDTO(
+        id: '2',
+        name: 'test',
+        description: 'test',
+        image: const ImageDTO(id: 'test', url: 'test-url-image'),
+        temperament: 'test',
+        origin: 'test',
+        adaptability: 1,
+      )
+    ];
+
+    test('should call Shared preferences to cache the data', () async {
+      // Arrange
+      when(mockSharedPreferences.setString(any, any))
+          .thenAnswer((_) async => true);
+      // Act
+      await dataSource.cacheCats(tCatsDTO);
+      // Assert
+      verify(mockSharedPreferences.setString(
+          CACHED_CATS, tCatsDTO.map((e) => e.toJson()).toList().toString()));
     });
   });
 }

@@ -1,4 +1,4 @@
-import 'package:app_cats/features/cat_detail/domain/entities/image.dart';
+import '/features/cat_detail/domain/entities/image.dart';
 
 /// Data Transfer Object Image
 class ImageDTO extends Image {
