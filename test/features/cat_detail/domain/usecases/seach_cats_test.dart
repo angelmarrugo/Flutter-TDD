@@ -37,7 +37,7 @@ void main() {
     when(mockCatRepository.searchCat(tSearch))
         .thenAnswer((_) async => Right(tCats));
     // Act
-    final result = await usecase.execute(breeds: tSearch);
+    final result = await usecase(const Params(breed: tSearch));
     // Assert
     expect(result, Right(tCats));
     // Verify that the method has been called on the Repository

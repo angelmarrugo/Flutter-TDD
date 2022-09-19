@@ -1,3 +1,4 @@
+import 'package:app_cats/core/usecases/usecase.dart';
 import 'package:app_cats/features/cat_detail/domain/entities/cat.dart';
 import 'package:app_cats/features/cat_detail/domain/repositories/cat_repository.dart';
 import 'package:app_cats/features/cat_detail/domain/usecases/get_cats.dart';
@@ -45,7 +46,7 @@ void main() {
     // Arrange
     when(mockCatRepository.getCats()).thenAnswer((_) async => Right(tCats));
     // Act
-    final result = await usecase.execute();
+    final result = await usecase(NoParams());
     // Assert
     expect(result, Right(tCats));
     // Verify that the method has been called on the Repository
