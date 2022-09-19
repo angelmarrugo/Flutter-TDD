@@ -1,4 +1,4 @@
-import 'package:app_cats/features/cat_detail/data/models/cat_DTO.dart';
+import 'package:app_cats/features/cat_detail/data/models/cat_dto.dart';
 
 /// Contracts
 abstract class CatRemoteDataSource {

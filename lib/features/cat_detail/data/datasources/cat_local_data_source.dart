@@ -1,4 +1,4 @@
-import '/features/cat_detail/data/models/cat_DTO.dart';
+import '/features/cat_detail/data/models/cat_dto.dart';
 
 /// Contracts
 abstract class CatLocalDataSource {

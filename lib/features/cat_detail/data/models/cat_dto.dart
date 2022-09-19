@@ -1,6 +1,5 @@
-// ignore: file_names
 import '/features/cat_detail/data/models/image_dto.dart';
-import '/features/cat_detail/domain/entities/cat.dart' show Cat;
+import '/features/cat_detail/domain/entities/cat.dart';
 
 /// Data Transfer Object of [Cat]
 class CatDTO extends Cat {

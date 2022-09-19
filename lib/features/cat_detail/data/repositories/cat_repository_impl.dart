@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:app_cats/core/error/exception.dart';
+
 import '/core/platform/network_info.dart';
 import '/features/cat_detail/data/datasources/cat_local_data_source.dart';
 import '/features/cat_detail/data/datasources/cat_remote_data_source.dart';
@@ -26,9 +28,23 @@ class CatRepositoryImpl implements CatRepository {
   final NetworkInfo networkInfo;
 
   @override
-  Future<Either<Failure, List<Cat>>> getCats() {
-    // TODO: implement getCats
-    throw UnimplementedError();
+  Future<Either<Failure, List<Cat>>> getCats() async {
+    if (await networkInfo.isConnected) {
+      try {
+        final catsDTO = await remoteDataSource.getCats();
+        localDataSource.cacheCats(catsDTO);
+        return Right(catsDTO);
+      } on ServerException {
+        return Left(ServerFailure());
+      }
+    } else {
+      try {
+        final localCatsDTO = await localDataSource.getCats();
+        return Right(localCatsDTO);
+      } on CacheException {
+        return Left(CacheFailure());
+      }
+    }
   }
 
   @override
